@@ -5,11 +5,8 @@ entertainment = ['A play', 'A concert', 'Netflix and chill', 'Museum']
 
 from asyncio.windows_events import NULL
 import random
-#eateries = restaurants
-#random.sample(restaurants)
 
 def restaurant_selection_loop(vacay_rest):
-    #user_choice_rest = "No"
     rest_notSatisfied = True
     print(f"Hungry? Here is a restaurant for your consideration.")  
     while rest_notSatisfied:
@@ -55,9 +52,7 @@ def transportation_selection_loop(transport):
             notSatisfied = False
     print("Mode of transport selected!")
     return rand_trans
-
 chosen_trans = transportation_selection_loop(transportation)
-
 def entertainment_selection_loop(vacay_fun):
     fun_notSatisfied = True
     print(f"How shall you amuse yourself? How does this sound?")  
@@ -73,3 +68,5 @@ def entertainment_selection_loop(vacay_fun):
     return rand_fun
   
 chosen_fun = entertainment_selection_loop(entertainment)    
+
+print(f"All selections have been made! here is your itinerary: \n Location: {chosen_dest} \n Transportation: {chosen_trans} \n Dinner: {chosen_rest} \n Entertainment: {chosen_fun}")
